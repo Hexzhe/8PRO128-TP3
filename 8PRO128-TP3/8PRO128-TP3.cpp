@@ -67,10 +67,10 @@ int main()
 
 	Employee* tabEmp[4];
 
-	tabEmp[0] = new PieceWorker("PieceWorker", "Name", Date(3, 3, 2000), 10, 5);
-	tabEmp[1] = new HourlyWorker("HourlyWorker", "Name", Date(6, 6, 2000), 10, 5);
-	tabEmp[2] = new CommissionWorker("CommissionWrkr", "Name", Date(9, 9, 2000), 10, 5, 25);
-	tabEmp[3] = new Boss("Boss", "Name", Date(12, 12, 2000), 10);
+	tabEmp[0] = new PieceWorker("Toby", "Turner", Date(3, 3, 1985), 2.5, 200);
+	tabEmp[1] = new HourlyWorker("Boomy", "McBoomer", Date(6, 6, 1961), 13.75, 40);
+	tabEmp[2] = new CommissionWorker("Adam", "Sandler", Date(9, 9, 1966), 200.0, 3.0, 150);
+	tabEmp[3] = new Boss("Hila", "Klein", Date(12, 12, 1987), 800.00);
 
 	std::cout << std::endl;
 	std::cout << "Simulation d'une annee de paie (paie chaque premier du mois):" << std::endl;
