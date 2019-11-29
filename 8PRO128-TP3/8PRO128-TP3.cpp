@@ -63,7 +63,7 @@ int main()
 
 	//Partie 3
 	std::cout << "===== Partie 3 =====" << std::endl;
-	std::cout << "Creation de 4 employees: \n  un PieceWorker (2000-03-03), \n  un HourlyWorker (2000-06-06), \n  un CommissionWorker (2000-09-09) et \n  un Boss (2000-12-12)" << std::endl;
+	std::cout << "Creation de 4 employees: \n  un PieceWorker (1985-03-03), \n  un HourlyWorker (1961-06-06), \n  un CommissionWorker (1966-09-09) et \n  un Boss (1987-12-12)" << std::endl;
 
 	Employee* tabEmp[4];
 
