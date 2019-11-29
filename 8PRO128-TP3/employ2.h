@@ -16,7 +16,7 @@ public:
 	virtual void print() const; // virtual
 
 private:
-	Date birthDate; //TODO
+	int birthDate; //TODO
 	char *firstName;
 	char *lastName;
 };

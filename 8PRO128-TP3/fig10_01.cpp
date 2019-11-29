@@ -19,7 +19,7 @@ using std::setprecision;
 void virtualViaPointer(const Employee *);
 void virtualViaReference(const Employee &);
 
-int main()
+int main2()
 {
 	// set output formatting
 	cout << setiosflags(ios::fixed | ios::showpoint)

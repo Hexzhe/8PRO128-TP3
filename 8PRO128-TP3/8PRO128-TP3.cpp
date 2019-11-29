@@ -14,9 +14,9 @@ int main()
 	std::cout << "===== Partie 2 =====" << std::endl;
 	Figure* tabFig[9]; //Le docx mentionne 12 mais il n'y a que 9 figures?
 
-	tabFig[0] = new Tetraedre();
-	tabFig[1] = new Triangle();
-	tabFig[2] = new TriangleEq();
+	tabFig[0] = new Triangle();
+	tabFig[1] = new TriangleEq();
+	tabFig[2] = new Tetraedre();
 
 	tabFig[3] = new Ellipse();
 	tabFig[4] = new Cercle();
