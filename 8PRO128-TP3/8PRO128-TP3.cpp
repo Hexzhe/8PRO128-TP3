@@ -15,7 +15,7 @@ int main()
 	Figure* tabFig[9]; //Le docx mentionne 12 mais il n'y a que 9 figures?
 
 	tabFig[0] = new Triangle(136.1354638546468, 140.61381464664846, 143.25072149870474);
-	tabFig[1] = new TriangleEq(31.143995444364091487234122468365);
+	tabFig[1] = new TriangleEq(23);
 	tabFig[2] = new Tetraedre(31.143995444364091487234122468365);
 
 	tabFig[3] = new Ellipse();
