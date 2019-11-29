@@ -5,7 +5,7 @@ using std::cout;
 
 #include "piece1.h"
 // Constructor for class PieceWorker
-PieceWorker::PieceWorker(const char *first, const char *last, double w, int q) : Employee(first, last)  // call base-class constructor
+PieceWorker::PieceWorker(const char *first, const char *last, Date bd, double w, int q) : Employee(first, last, bd)  // call base-class constructor
 {
 	setWage(w);
 	setQuantity(q);

@@ -5,7 +5,7 @@ using std::cout;
 
 #include "commis1.h"
 // Constructor for class CommissionWorker
-CommissionWorker::CommissionWorker(const char *first, const char *last, double s, double c, int q) : Employee(first, last)  // call base-class constructor
+CommissionWorker::CommissionWorker(const char *first, const char *last, Date bd, double s, double c, int q) : Employee(first, last, bd)  // call base-class constructor
 {
 	setSalary(s);
 	setCommission(c);

@@ -1,11 +1,12 @@
 // Abstract base class Employee
 #include <ctime>
+#include "Date.h"
 #ifndef EMPLOY2_H
 #define EMPLOY2_H
 
 class Employee {
 public:
-	Employee(const char *, const char *);
+	Employee(const char *, const char *, Date bd);
 	~Employee(); // destructor reclaims memory
 
 	const char *getFirstName() const;
@@ -16,7 +17,7 @@ public:
 	virtual void print() const; // virtual
 
 private:
-	int birthDate; //TODO
+	Date birthDate;
 	char *firstName;
 	char *lastName;
 };

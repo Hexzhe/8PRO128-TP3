@@ -6,7 +6,7 @@
 using std::cout;
 
 // Constructor function for class Boss
-Boss::Boss(const char *first, const char *last, double s) : Employee(first, last)  // call base-class constructor
+Boss::Boss(const char *first, const char *last, Date bd, double s) : Employee(first, last, bd)  // call base-class constructor
 {
 	setWeeklySalary(s);
 }

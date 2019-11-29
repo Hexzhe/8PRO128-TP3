@@ -12,7 +12,7 @@ using std::cout;
 // Constructor dynamically allocates space for the
 // first and last name and uses strcpy to copy
 // the first and last names into the object.
-Employee::Employee(const char *first, const char *last)
+Employee::Employee(const char *first, const char *last, Date bd)
 {
 	firstName = new char[strlen(first) + 1];
 	assert(firstName != 0); // test that new worked
@@ -21,6 +21,8 @@ Employee::Employee(const char *first, const char *last)
 	lastName = new char[strlen(last) + 1];
 	assert(lastName != 0); // test that new worked
 	strcpy_s(lastName, 16, last);
+
+	birthDate = bd;
 }
 
 // Destructor deallocates dynamically allocated memory

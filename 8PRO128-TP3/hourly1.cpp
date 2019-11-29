@@ -5,7 +5,7 @@
 using std::cout;
 
 // Constructor for class HourlyWorker
-HourlyWorker::HourlyWorker(const char *first, const char *last, double w, double h)	: Employee(first, last)   // call base-class constructor
+HourlyWorker::HourlyWorker(const char *first, const char *last, Date bd, double w, double h)	: Employee(first, last, bd)   // call base-class constructor
 {
 	setWage(w);
 	setHours(h);

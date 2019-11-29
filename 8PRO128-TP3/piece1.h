@@ -6,7 +6,7 @@
 
 class PieceWorker : public Employee {
 public:
-	PieceWorker(const char *, const char *, double = 0.0, int = 0);
+	PieceWorker(const char *, const char *, Date bd, double = 0.0, int = 0);
 	void setWage(double);
 	void setQuantity(int);
 	virtual double earnings() const;

@@ -18,7 +18,10 @@
 #include "Sphere.h"
 #include "Cube.h"
 #include "Segment.h"
-#include "Date.h"
+#include "piece1.h"
+#include "hourly1.h"
+#include "commis1.h"
+#include "boss1.h"
 
 int main()
 {
@@ -59,5 +62,23 @@ int main()
 
 	//Partie 3
 	std::cout << "===== Partie 3 =====" << std::endl;
-	//TODO
+	std::cout << "Creation de 4 employees: \n  un PieceWorker (2000-03-03), \n  un HourlyWorker (2000-06-06), \n  un CommissionWorker (2000-09-09) et \n  un Boss (2000-12-12)" << std::endl;
+
+	Employee* tabEmp[4];
+
+	tabEmp[0] = new PieceWorker("Piece", "Worker", Date(3, 3, 2000), 0, 0);
+	tabEmp[1] = new HourlyWorker("Hourly", "Worker", Date(6, 6, 2000), 0, 0);
+	tabEmp[2] = new CommissionWorker("Commission", "Worker", Date(9, 9, 2000), 0, 0, 0);
+	tabEmp[3] = new Boss("Boss", "Worker", Date(12, 12, 2000), 0);
+
+	std::cout << std::endl;
+	std::cout << "Simulation d'une année de paie (paie chaque premier du mois):" << std::endl;
+	for (size_t i = 0; i < 12; i++)
+	{
+		std::cout << "Mois " << i + 1 << ":" << std::endl;
+		//TODO
+	}
+	
+	delete point, segment, tabFig;
+	return 0;
 }
