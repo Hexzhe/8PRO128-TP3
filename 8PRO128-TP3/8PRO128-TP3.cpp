@@ -1,4 +1,19 @@
-﻿#include <iostream>
+﻿/******************************************************************
+* Titre:       Travail pratique #3 (https://github.com/Hexzhe/8PRO128-TP3)
+* Auteur(e)s:  Dominique Boivin (BOID31609701)
+*              Jason Gilbert (GILJ05069703)
+* Date:        2019-11-28
+* Description: Petit programme d'affichage en trois parties selon le
+			   document TP3_2.docx.
+			   Partie 1: Transformation des classes Point et Segment
+			   du premier travail en Template.
+			   Partie 2: Implémentation d'une fonction d'affichage
+			   virtuelle dans tous les classes dérivés de Figure.
+			   Partie 3: Modification de la classe Employe pour y
+			   ajouter un attribut birthDate de type Date.
+*******************************************************************/
+
+#include <iostream>
 #include "Tetraedre.h"
 #include "Sphere.h"
 #include "Cube.h"
