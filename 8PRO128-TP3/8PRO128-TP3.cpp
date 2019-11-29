@@ -43,6 +43,7 @@ int main()
 
 	//Partie 3
 	std::cout << "===== Partie 3 =====" << std::endl;
+	//TODO
 	
 	delete point, segment, tabFig;
 	return 0;
