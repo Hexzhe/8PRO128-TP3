@@ -4,6 +4,10 @@ Carre::Carre() : Rectangle()
 {
 }
 
+Carre::Carre(double c) : Rectangle(c, c)
+{
+}
+
 double Carre::aire() const
 {
 	auto x = pow(Rectangle::largeur, 2);

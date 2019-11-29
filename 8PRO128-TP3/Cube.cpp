@@ -4,6 +4,10 @@ Cube::Cube() : Carre()
 {
 }
 
+Cube::Cube(double c) : Carre(c)
+{
+}
+
 double Cube::aire() const
 {
 	return 6 * Carre::aire();

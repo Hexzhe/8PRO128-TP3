@@ -16,8 +16,8 @@ Triangle::Triangle(double c1, double c2, double c3) : Figure()
 
 double Triangle::aire() const
 {
-	double p = perimetre();
-	return sqrt(p * (p - cote1) * (p - cote2) * (p - cote3));
+	double s = perimetre() / 2;
+	return sqrt(s * (s - cote1) * (s - cote2) * (s - cote3));
 }
 
 double Triangle::perimetre() const

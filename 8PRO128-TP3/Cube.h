@@ -6,6 +6,7 @@ class Cube :
 {
 public:
 	Cube();
+	Cube(double c);
 	~Cube() {};
 
 	double aire() const;

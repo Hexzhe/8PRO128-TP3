@@ -6,6 +6,7 @@ class Rectangle :
 {
 public:
 	Rectangle();
+	Rectangle(double lrg, double lng);
 	~Rectangle() {};
 
 	double largeur;

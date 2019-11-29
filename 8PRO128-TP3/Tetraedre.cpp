@@ -31,7 +31,7 @@ double Tetraedre::hauteur() const
 
 void Tetraedre::afficher(std::ostream& os) const
 {
-	os << "TriangleEq:" << std::endl;
+	os << "Tetraedre:" << std::endl;
 	os << this->getEntete() << std::endl;
 	os << std::setw(9) << std::setprecision(2) << std::fixed << this->TriangleEq::cote1 << " ";
 	os << std::setw(9) << std::setprecision(2) << std::fixed << this->aire() << " ";

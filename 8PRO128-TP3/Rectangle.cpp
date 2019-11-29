@@ -6,6 +6,12 @@ Rectangle::Rectangle() : Figure()
 	longueur = 0.0;
 }
 
+Rectangle::Rectangle(double lrg, double lng) : Figure()
+{
+	largeur = lrg;
+	longueur = lng;
+}
+
 double Rectangle::aire() const
 {
 	return longueur * largeur;

@@ -6,6 +6,7 @@ class Carre :
 {
 public:
 	Carre();
+	Carre(double c);
 	~Carre() {};
 
 	double aire() const;
