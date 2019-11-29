@@ -6,6 +6,7 @@ class TriangleEq :
 {
 public:
 	TriangleEq();
+	TriangleEq(double c);
 	~TriangleEq() {};
 
 	double aire() const;

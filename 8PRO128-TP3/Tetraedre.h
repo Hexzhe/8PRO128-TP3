@@ -6,6 +6,7 @@ class Tetraedre :
 {
 public:
 	Tetraedre();
+	Tetraedre(double c);
 	~Tetraedre() {};
 
 	double aire() const;

@@ -4,6 +4,10 @@ TriangleEq::TriangleEq() : Triangle()
 {
 }
 
+TriangleEq::TriangleEq(double c) : Triangle(c, c, c)
+{
+}
+
 double TriangleEq::aire() const
 {
 	return Triangle::aire();

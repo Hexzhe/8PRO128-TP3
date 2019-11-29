@@ -4,6 +4,10 @@ Tetraedre::Tetraedre() : TriangleEq()
 {
 }
 
+Tetraedre::Tetraedre(double c) : TriangleEq(c)
+{
+}
+
 double Tetraedre::aire() const
 {
 	return sqrt(3) * pow(TriangleEq::cote1, 2);
