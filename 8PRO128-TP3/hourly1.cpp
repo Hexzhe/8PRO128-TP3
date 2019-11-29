@@ -1,8 +1,7 @@
 // Fig. 10.1: hourly1.cpp
 // Member function definitions for class HourlyWorker
-#include <iostream>
+
 #include "hourly1.h"
-using std::cout;
 
 // Constructor for class HourlyWorker
 HourlyWorker::HourlyWorker(const char *first, const char *last, Date bd, double w, double h)	: Employee(first, last, bd)   // call base-class constructor
@@ -34,6 +33,6 @@ double HourlyWorker::earnings() const
 // Print the HourlyWorker's name 
 void HourlyWorker::print() const
 {
-	cout << "\n    Hourly worker: ";
+	std::cout << "      Hourly worker: ";
 	Employee::print();
 }

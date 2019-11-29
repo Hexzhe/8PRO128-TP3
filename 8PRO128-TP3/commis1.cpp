@@ -1,9 +1,8 @@
 // Fig. 10.1: commis1.cpp
 // Member function definitions for class CommissionWorker
-#include <iostream>
-using std::cout;
 
 #include "commis1.h"
+
 // Constructor for class CommissionWorker
 CommissionWorker::CommissionWorker(const char *first, const char *last, Date bd, double s, double c, int q) : Employee(first, last, bd)  // call base-class constructor
 {
@@ -39,6 +38,6 @@ double CommissionWorker::earnings() const
 // Print the CommissionWorker's name 
 void CommissionWorker::print() const
 {
-	cout << "\nCommission worker: ";
+	std::cout << "  Commission worker: ";
 	Employee::print();
 }

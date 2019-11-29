@@ -7,7 +7,6 @@
 #include <cstring>
 #include <cassert>
 #include "employ2.h"
-using std::cout;
 
 // Constructor dynamically allocates space for the
 // first and last name and uses strcpy to copy
@@ -54,5 +53,5 @@ const char *Employee::getLastName() const
 // Print the name of the Employee
 void Employee::print() const
 {
-	cout << firstName << ' ' << lastName;
+	std::cout << firstName << ' ' << lastName << std::endl;
 } 

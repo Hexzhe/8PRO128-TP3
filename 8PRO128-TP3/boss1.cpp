@@ -1,9 +1,7 @@
 // Fig. 10.1: boss1.cpp
 // Member function definitions for class Boss
 
-#include <iostream>
 #include "boss1.h"
-using std::cout;
 
 // Constructor function for class Boss
 Boss::Boss(const char *first, const char *last, Date bd, double s) : Employee(first, last, bd)  // call base-class constructor
@@ -21,6 +19,6 @@ double Boss::earnings() const { return weeklySalary; }
 // Print the Boss's name 
 void Boss::print() const
 {
-	cout << "\n             Boss: ";
+	std::cout << "               Boss: ";
 	Employee::print();
 } 

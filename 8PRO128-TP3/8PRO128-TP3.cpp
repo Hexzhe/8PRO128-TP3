@@ -56,9 +56,10 @@ int main()
 	tabFig[8] = new Cube(7.48887238722);
 
 	for (size_t i = 0; i < 9; i++)
+	{
 		std::cout << *tabFig[i] << std::endl;
-
-	std::cout << std::endl;
+		std::cout << std::endl;
+	}
 
 	//Partie 3
 	std::cout << "===== Partie 3 =====" << std::endl;
@@ -66,17 +67,28 @@ int main()
 
 	Employee* tabEmp[4];
 
-	tabEmp[0] = new PieceWorker("Piece", "Worker", Date(3, 3, 2000), 0, 0);
-	tabEmp[1] = new HourlyWorker("Hourly", "Worker", Date(6, 6, 2000), 0, 0);
-	tabEmp[2] = new CommissionWorker("Commission", "Worker", Date(9, 9, 2000), 0, 0, 0);
-	tabEmp[3] = new Boss("Boss", "Worker", Date(12, 12, 2000), 0);
+	tabEmp[0] = new PieceWorker("PieceWorker", "Name", Date(3, 3, 2000), 10, 5);
+	tabEmp[1] = new HourlyWorker("HourlyWorker", "Name", Date(6, 6, 2000), 10, 5);
+	tabEmp[2] = new CommissionWorker("CommissionWrkr", "Name", Date(9, 9, 2000), 10, 5, 25);
+	tabEmp[3] = new Boss("Boss", "Name", Date(12, 12, 2000), 10);
 
 	std::cout << std::endl;
 	std::cout << "Simulation d'une année de paie (paie chaque premier du mois):" << std::endl;
+
+	Date date(1, 1, 2019);
 	for (size_t i = 0; i < 12; i++)
 	{
-		std::cout << "Mois " << i + 1 << ":" << std::endl;
-		//TODO
+		std::cout << date << std::endl;
+
+		for (size_t j = 0; j < 4; j++)
+		{
+			tabEmp[j]->print();
+			std::cout << "                Pay: $" << tabEmp[j]->earnings() << std::endl;
+			std::cout << std::endl;
+		}
+
+		date.setDate(i + 1, 1, 2019);
+		
 	}
 	
 	delete point, segment, tabFig;
