@@ -2,12 +2,22 @@
 #include "Tetraedre.h"
 #include "Sphere.h"
 #include "Cube.h"
+#include "Segment.h"
 
 int main()
 {
 	//Partie 1
 	std::cout << "===== Partie 1 =====" << std::endl;
-	//TODO
+	
+	Point<double>* point = new Point<double>(4.89, 7.89);
+	std::cout << "Voici un Point<double>: " << point->Info() << std::endl;
+	std::cout << "Deplacement relatif de (1.11, 1.11): " << point->MoveRelative(1.11, 1.11).Info() << std::endl;
+	std::cout << std::endl;
+
+	Segment<char>* segment = new Segment<char>('"', 7, 'g', 7);
+	std::cout << "Voici un Segment<char>: " << segment->Info() << std::endl;
+	std::cout << "Deplacement relatif de (p, p): " << segment->MoveRelative('p', 'p').Info() << std::endl;
+
 	std::cout << std::endl;
 
 	//Partie 2
@@ -34,6 +44,6 @@ int main()
 	//Partie 3
 	std::cout << "===== Partie 3 =====" << std::endl;
 	
-
+	delete point, segment, tabFig;
 	return 0;
 }

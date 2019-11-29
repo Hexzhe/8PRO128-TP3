@@ -10,9 +10,13 @@ public:
 		this->PointA = a;
 		this->PointB = b;
 	}
+	Segment(T pointAX, T pointAY, T pointBX, T pointBY) {
+		this->PointA = Point<T>(pointAX, pointAY);
+		this->PointB = Point<T>(pointBX, pointBY);
+	}
 	~Segment() {};
 
-	MoveAbsolute(Point<T> newA, Point<T> newB){
+	void MoveAbsolute(Point<T> newA, Point<T> newB){
 		this->PointA.MoveAbsolute(newA.GetX(), newA.GetY());
 		this->PointB.MoveAbsolute(newB.GetX(), newB.GetY());
 	}

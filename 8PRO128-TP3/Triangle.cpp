@@ -42,6 +42,8 @@ double Triangle::hauteur(int cote) const
 	case 3:
 		return 2 * aire() / cote3;
 	}
+
+	return 0;
 }
 
 void Triangle::afficher(std::ostream& os) const
