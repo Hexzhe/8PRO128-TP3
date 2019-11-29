@@ -18,6 +18,7 @@
 #include "Sphere.h"
 #include "Cube.h"
 #include "Segment.h"
+#include "Date.h"
 
 int main()
 {
@@ -59,7 +60,4 @@ int main()
 	//Partie 3
 	std::cout << "===== Partie 3 =====" << std::endl;
 	//TODO
-	
-	delete point, segment, tabFig;
-	return 0;
 }

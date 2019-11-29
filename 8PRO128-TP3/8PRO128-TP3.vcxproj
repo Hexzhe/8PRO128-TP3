@@ -129,6 +129,7 @@
     <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="commis1.cpp" />
     <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="Date.cpp" />
     <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="employ2.cpp" />
     <ClCompile Include="fig10_01.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Cercle.h" />
     <ClInclude Include="commis1.h" />
     <ClInclude Include="Cube.h" />
+    <ClInclude Include="Date.h" />
     <ClInclude Include="Ellipse.h" />
     <ClInclude Include="employ2.h" />
     <ClInclude Include="Figure.h" />
