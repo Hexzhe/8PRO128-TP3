@@ -120,4 +120,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ResourceFiles\TP3_2.docx">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>
