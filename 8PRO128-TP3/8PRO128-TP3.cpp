@@ -1,4 +1,7 @@
 #include <iostream>
+#include "Tetraedre.h"
+#include "Sphere.h"
+#include "Cube.h"
 
 int main()
 {
@@ -9,7 +12,24 @@ int main()
 	//TODO
 
 	//Partie 3
-	//TODO
+	Figure* tabFig[9]; //Le docx mentionne 12 mais il n'y a que 9 figures?
+
+	tabFig[0] = new Tetraedre();
+	tabFig[1] = new Triangle();
+	tabFig[2] = new TriangleEq();
+
+	tabFig[3] = new Ellipse();
+	tabFig[4] = new Cercle();
+	tabFig[5] = new Sphere();
+
+	tabFig[6] = new Rectangle();
+	tabFig[7] = new Carre();
+	tabFig[8] = new Cube();
+
+	for (size_t i = 0; i < 9; i++)
+	{
+		std::cout << tabFig[i] << std::endl;
+	}
 
 	return 0;
 }
