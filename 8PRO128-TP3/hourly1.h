@@ -9,7 +9,7 @@ public:
 		double = 0.0, double = 0.0);
 	void setWage(double);
 	void setHours(double);
-	virtual double earnings() const;
+	virtual double earnings(Date) const;
 	virtual void print() const;
 private:
 	double wage;   // wage per hour

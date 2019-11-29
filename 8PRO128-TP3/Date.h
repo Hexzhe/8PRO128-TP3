@@ -16,6 +16,7 @@ public:
 	Date& operator+=(unsigned int); // add days, modify object
 	static bool leapYear(int); // is year a leap year?
 	bool endOfMonth(int) const; // is day at the end of month?
+	bool isSameMonth(Date); // are the two dates the same month?
 private:
 	unsigned int month;
 	unsigned int day;

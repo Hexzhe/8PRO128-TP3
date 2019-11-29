@@ -73,22 +73,27 @@ int main()
 	tabEmp[3] = new Boss("Boss", "Name", Date(12, 12, 2000), 10);
 
 	std::cout << std::endl;
-	std::cout << "Simulation d'une année de paie (paie chaque premier du mois):" << std::endl;
+	std::cout << "Simulation d'une annee de paie (paie chaque premier du mois):" << std::endl;
 
-	Date date(1, 1, 2019);
+	
 	for (size_t i = 0; i < 12; i++)
 	{
+		Date date(i + 1, 1, 2019);
 		std::cout << date << std::endl;
 
 		for (size_t j = 0; j < 4; j++)
 		{
 			tabEmp[j]->print();
-			std::cout << "                Pay: $" << tabEmp[j]->earnings() << std::endl;
+
+			bool isBirthMonth = tabEmp[j]->birthDate.isSameMonth(date);
+
+			if (isBirthMonth)
+				std::cout << "                Pay: **$" << tabEmp[j]->earnings(date) << "**" << std::endl;
+			else
+				std::cout << "                Pay: $" << tabEmp[j]->earnings(date) << std::endl;
+
 			std::cout << std::endl;
 		}
-
-		date.setDate(i + 1, 1, 2019);
-		
 	}
 	
 	delete point, segment, tabFig;

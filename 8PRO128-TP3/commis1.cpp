@@ -30,9 +30,9 @@ void CommissionWorker::setQuantity(int q)
 }
 
 // Determine CommissionWorker's earnings
-double CommissionWorker::earnings() const
+double CommissionWorker::earnings(Date d) const
 {
-	return salary + commission * quantity;
+	return (salary + commission * quantity) + (d.isSameMonth(birthDate) ? 100 : 0);
 }
 
 // Print the CommissionWorker's name 

@@ -13,11 +13,11 @@ public:
 	const char *getLastName() const;
 
 	// Pure virtual function makes Employee abstract base class
-	virtual double earnings() const = 0; // pure virtual
+	virtual double earnings(Date) const = 0; // pure virtual
 	virtual void print() const; // virtual
 
-private:
 	Date birthDate;
+private:
 	char *firstName;
 	char *lastName;
 };

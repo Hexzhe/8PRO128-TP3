@@ -132,7 +132,6 @@
     <ClCompile Include="Date.cpp" />
     <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="employ2.cpp" />
-    <ClCompile Include="fig10_01.cpp" />
     <ClCompile Include="Figure.cpp" />
     <ClCompile Include="hourly1.cpp" />
     <ClCompile Include="piece1.cpp" />

@@ -9,7 +9,7 @@ class Boss : public Employee {
 public:
 	Boss(const char *, const char *, Date bd, double = 0.0);
 	void setWeeklySalary(double);
-	virtual double earnings() const;
+	virtual double earnings(Date) const;
 	virtual void print() const;
 
 private:

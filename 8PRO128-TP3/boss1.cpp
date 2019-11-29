@@ -14,7 +14,10 @@ void Boss::setWeeklySalary(double s)
 	weeklySalary = s > 0 ? s : 0;
 }
 // Get the Boss's pay
-double Boss::earnings() const { return weeklySalary; }
+double Boss::earnings(Date d) const 
+{ 
+	return weeklySalary + (d.isSameMonth(birthDate) ? 100 : 0);
+}
 
 // Print the Boss's name 
 void Boss::print() const

@@ -23,9 +23,9 @@ void PieceWorker::setQuantity(int q)
 }
 
 // Determine the PieceWorker's earnings
-double PieceWorker::earnings() const
+double PieceWorker::earnings(Date d) const
 {
-	return quantity * wagePerPiece;
+	return (quantity * wagePerPiece) + (d.isSameMonth(birthDate) ? 100 : 0);
 }
 
 // Print the PieceWorker's name 

@@ -22,12 +22,12 @@ void HourlyWorker::setHours(double h)
 }
 
 // Get the HourlyWorker's pay
-double HourlyWorker::earnings() const
+double HourlyWorker::earnings(Date d) const
 {
 	if (hours <= 40) // no overtime
-		return wage * hours;
+		return (wage * hours) + (d.isSameMonth(birthDate) ? 100 : 0);
 	else // overtime is paid at wage * 1.5
-		return 40 * wage + (hours - 40) * wage * 1.5;
+		return (40 * wage + (hours - 40) * wage * 1.5) + (d.isSameMonth(birthDate) ? 100 : 0);
 }
 
 // Print the HourlyWorker's name 

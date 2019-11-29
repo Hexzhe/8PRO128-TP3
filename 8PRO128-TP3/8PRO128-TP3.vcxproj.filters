@@ -24,9 +24,6 @@
     <ClCompile Include="employ2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="fig10_01.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="hourly1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

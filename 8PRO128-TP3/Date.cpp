@@ -81,6 +81,11 @@ bool Date::endOfMonth(int testDay) const {
 	}
 }
 
+bool Date::isSameMonth(Date d)
+{
+	return this->month == d.month;
+}
+
 // function to help increment the date
 void Date::helpIncrement() {
 	// day is not end of month

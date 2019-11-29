@@ -11,7 +11,7 @@ public:
 	void setSalary(double);
 	void setCommission(double);
 	void setQuantity(int);
-	virtual double earnings() const;
+	virtual double earnings(Date) const;
 	virtual void print() const;
 
 private:

@@ -9,7 +9,7 @@ public:
 	PieceWorker(const char *, const char *, Date bd, double = 0.0, int = 0);
 	void setWage(double);
 	void setQuantity(int);
-	virtual double earnings() const;
+	virtual double earnings(Date) const;
 	virtual void print() const;
 
 private:
