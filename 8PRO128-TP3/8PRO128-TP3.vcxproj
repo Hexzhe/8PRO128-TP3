@@ -125,20 +125,26 @@
   <ItemGroup>
     <ClCompile Include="8PRO128-TP3.cpp" />
     <ClCompile Include="boss1.cpp" />
+    <ClCompile Include="Carre.cpp" />
     <ClCompile Include="commis1.cpp" />
     <ClCompile Include="employ2.cpp" />
     <ClCompile Include="fig10_01.cpp" />
     <ClCompile Include="hourly1.cpp" />
     <ClCompile Include="piece1.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
+    <ClCompile Include="Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boss1.h" />
+    <ClInclude Include="Carre.h" />
     <ClInclude Include="commis1.h" />
     <ClInclude Include="employ2.h" />
     <ClInclude Include="hourly1.h" />
     <ClInclude Include="piece1.h" />
     <ClInclude Include="Point.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Segment.h" />
+    <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
