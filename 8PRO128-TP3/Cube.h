@@ -12,7 +12,7 @@ public:
 	double face() const;
 	double volume() const;
 
-	void afficher() const;
+	virtual void afficher(std::ostream& os) const;
 	static std::string getEntete();
 
 	friend std::istream& operator>>(std::istream& is, Cube& cube);

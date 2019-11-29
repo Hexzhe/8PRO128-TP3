@@ -7,6 +7,13 @@ Triangle::Triangle() : Figure()
 	cote3 = 0.0;
 }
 
+Triangle::Triangle(double c1, double c2, double c3) : Figure()
+{
+	cote1 = c1;
+	cote2 = c2;
+	cote3 = c3;
+}
+
 double Triangle::aire() const
 {
 	double p = perimetre();
@@ -37,25 +44,16 @@ double Triangle::hauteur(int cote) const
 	}
 }
 
-void Triangle::afficher() const
+void Triangle::afficher(std::ostream& os) const
 {
-	std::cout << *this << std::endl;
-
-	std::string path = "ResourceFiles/Output/resultTriangle.txt";
-	bool exist = false;
-
-	std::ifstream ifs(path);
-	if (ifs)
-		exist = true;
-	ifs.close();
-
-	std::ofstream ofs(path, std::ios::out | std::ios::app);
-	if (!exist)
-		ofs << Triangle::getEntete() << std::endl;
-
-	ofs << *this << std::endl;
-
-	ofs.close();
+	os << "Triangle:" << std::endl;
+	os << this->getEntete() << std::endl;
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->cote1 << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->cote2 << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->cote3 << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->aire() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->perimetre() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->hauteur(1);
 }
 
 std::string Triangle::getEntete()
@@ -72,12 +70,6 @@ std::istream& operator>>(std::istream& is, Triangle& triangle)
 
 std::ostream& operator<<(std::ostream& os, const Triangle& triangle)
 {
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangle.cote1 << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangle.cote2 << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangle.cote3 << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangle.aire() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangle.perimetre() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangle.hauteur(1);
-
+	triangle.afficher(os);
 	return os;
 }

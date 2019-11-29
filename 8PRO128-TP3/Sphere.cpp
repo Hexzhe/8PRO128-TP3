@@ -19,25 +19,14 @@ double Sphere::volume() const
 	return 4 * M_PI * pow(Cercle::rayon, 3) / 3;
 }
 
-void Sphere::afficher() const
+void Sphere::afficher(std::ostream& os) const
 {
-	std::cout << *this << std::endl;
-
-	std::string path = "ResourceFiles/Output/resultSphere.txt";
-	bool exist = false;
-
-	std::ifstream ifs(path);
-	if (ifs)
-		exist = true;
-	ifs.close();
-
-	std::ofstream ofs(path, std::ios::out | std::ios::app);
-	if (!exist)
-		ofs << Sphere::getEntete() << std::endl;
-
-	ofs << *this << std::endl;
-
-	ofs.close();
+	os << "Sphere:" << std::endl;
+	os << this->getEntete() << std::endl;
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->Cercle::rayon << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->diametre() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->aire() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->volume();
 }
 
 std::string Sphere::getEntete()
@@ -54,10 +43,6 @@ std::istream& operator>>(std::istream& is, Sphere& sphere)
 
 std::ostream& operator<<(std::ostream& os, const Sphere& sphere)
 {
-	os << std::setw(9) << std::setprecision(2) << std::fixed << sphere.Cercle::rayon << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << sphere.diametre() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << sphere.aire() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << sphere.volume();
-
+	sphere.afficher(os);
 	return os;
 }

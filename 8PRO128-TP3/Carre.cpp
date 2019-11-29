@@ -20,25 +20,14 @@ double Carre::diagonale() const
 	return sqrt(aire() * 2);
 }
 
-void Carre::afficher() const
+void Carre::afficher(std::ostream& os) const
 {
-	std::cout << *this << std::endl;
-
-	std::string path = "ResourceFiles/Output/resultCarre.txt";
-	bool exist = false;
-
-	std::ifstream ifs(path);
-	if (ifs)
-		exist = true;
-	ifs.close();
-
-	std::ofstream ofs(path, std::ios::out | std::ios::app);
-	if (!exist)
-		ofs << Carre::getEntete() << std::endl;
-
-	ofs << *this << std::endl;
-
-	ofs.close();
+	os << "Carre:" << std::endl;
+	os << this->getEntete() << std::endl;
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->Rectangle::largeur << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->aire() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->perimetre() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->diagonale();
 }
 
 std::string Carre::getEntete()
@@ -56,10 +45,6 @@ std::istream& operator>>(std::istream& is, Carre& carre)
 
 std::ostream& operator<<(std::ostream& os, const Carre& carre)
 {
-	os << std::setw(9) << std::setprecision(2) << std::fixed << carre.Rectangle::largeur << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << carre.aire() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << carre.perimetre() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << carre.diagonale();
-
+	carre.afficher(os);
 	return os;
 }

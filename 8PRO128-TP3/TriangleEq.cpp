@@ -19,25 +19,14 @@ double TriangleEq::hauteur() const
 	return Triangle::cote1 * sqrt(3) / 2;
 }
 
-void TriangleEq::afficher() const
+void TriangleEq::afficher(std::ostream& os) const
 {
-	std::cout << *this << std::endl;
-
-	std::string path = "ResourceFiles/Output/resultTriangleEq.txt";
-	bool exist = false;
-
-	std::ifstream ifs(path);
-	if (ifs)
-		exist = true;
-	ifs.close();
-
-	std::ofstream ofs(path, std::ios::out | std::ios::app);
-	if (!exist)
-		ofs << TriangleEq::getEntete() << std::endl;
-
-	ofs << *this << std::endl;
-
-	ofs.close();
+	os << "TriangleEq:" << std::endl;
+	os << this->getEntete() << std::endl;
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->Triangle::cote1 << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->aire() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->perimetre() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->hauteur();
 }
 
 std::string TriangleEq::getEntete()
@@ -55,10 +44,6 @@ std::istream& operator>>(std::istream& is, TriangleEq& triangleEq)
 
 std::ostream& operator<<(std::ostream& os, const TriangleEq& triangleEq)
 {
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangleEq.Triangle::cote1 << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangleEq.aire() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangleEq.perimetre() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << triangleEq.hauteur();
-
+	triangleEq.afficher(os);
 	return os;
 }

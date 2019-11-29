@@ -20,25 +20,14 @@ double Cercle::diametre() const
 	return 2 * rayon;
 }
 
-void Cercle::afficher() const
+void Cercle::afficher(std::ostream& os) const
 {
-	std::cout << *this << std::endl;
-
-	std::string path = "ResourceFiles/Output/resultCercle.txt";
-	bool exist = false;
-
-	std::ifstream ifs(path);
-	if (ifs)
-		exist = true;
-	ifs.close();
-
-	std::ofstream ofs(path, std::ios::out | std::ios::app);
-	if (!exist)
-		ofs << Cercle::getEntete() << std::endl;
-
-	ofs << *this << std::endl;
-
-	ofs.close();
+	os << "Cercle:" << std::endl;
+	os << this->getEntete() << std::endl;
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->rayon << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->aire() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->perimetre() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->diametre();
 }
 
 std::string Cercle::getEntete()
@@ -55,10 +44,6 @@ std::istream& operator>>(std::istream& is, Cercle& cercle)
 
 std::ostream& operator<<(std::ostream& os, const Cercle& cercle)
 {
-	os << std::setw(9) << std::setprecision(2) << std::fixed << cercle.rayon << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << cercle.aire() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << cercle.perimetre() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << cercle.diametre();
-
+	cercle.afficher(os);
 	return os;
 }

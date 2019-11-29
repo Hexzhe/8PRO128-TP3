@@ -19,25 +19,14 @@ double Cube::volume() const
 	return pow(Carre::largeur, 3);
 }
 
-void Cube::afficher() const
+void Cube::afficher(std::ostream& os) const
 {
-	std::cout << *this << std::endl;
-
-	std::string path = "ResourceFiles/Output/resultCube.txt";
-	bool exist = false;
-
-	std::ifstream ifs(path);
-	if (ifs)
-		exist = true;
-	ifs.close();
-
-	std::ofstream ofs(path, std::ios::out | std::ios::app);
-	if (!exist)
-		ofs << Cube::getEntete() << std::endl;
-
-	ofs << *this << std::endl;
-
-	ofs.close();
+	os << "Cube:" << std::endl;
+	os << this->getEntete() << std::endl;
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->Carre::largeur << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->aire() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->face() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->volume();
 }
 
 std::string Cube::getEntete()
@@ -54,10 +43,6 @@ std::istream& operator>>(std::istream& is, Cube& cube)
 
 std::ostream& operator<<(std::ostream& os, const Cube& cube)
 {
-	os << std::setw(9) << std::setprecision(2) << std::fixed << cube.Carre::largeur << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << cube.aire() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << cube.face() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << cube.volume();
-
+	cube.afficher(os);
 	return os;
 }

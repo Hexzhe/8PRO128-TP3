@@ -6,6 +6,7 @@ class Triangle :
 {
 public:
 	Triangle();
+	Triangle(double c1, double c2, double c3);
 	~Triangle() {};
 
 	double cote1;
@@ -16,7 +17,7 @@ public:
 	double perimetre() const;
 	double hauteur(int cote) const;
 
-	void afficher() const;
+	void afficher(std::ostream& os) const;
 	static std::string getEntete();
 
 	friend std::istream& operator>>(std::istream& is, Triangle& triangle);

@@ -13,7 +13,7 @@ public:
 	double volume() const;
 	double hauteur() const;
 
-	void afficher() const;
+	virtual void afficher(std::ostream& os) const;
 	static std::string getEntete();
 
 	friend std::istream& operator>>(std::istream& is, Tetraedre& tetraedre);

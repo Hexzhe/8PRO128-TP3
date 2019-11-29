@@ -4,25 +4,11 @@ Ellipse::Ellipse() :  Figure()
 {
 }
 
-void Ellipse::afficher() const
+void Ellipse::afficher(std::ostream& os) const
 {
-	std::cout << *this << std::endl;
-
-	std::string path = "ResourceFiles/Output/resultEllipse.txt";
-	bool exist = false;
-
-	std::ifstream ifs(path);
-	if (ifs)
-		exist = true;
-	ifs.close();
-
-	std::ofstream ofs(path, std::ios::out | std::ios::app);
-	if (!exist)
-		ofs << Ellipse::getEntete() << std::endl;
-
-	ofs << *this << std::endl;
-
-	ofs.close();
+	os << "Ellipse:" << std::endl;
+	os << this->getEntete() << std::endl;
+	os << "?" << std::flush;
 }
 
 std::string Ellipse::getEntete()
@@ -37,6 +23,6 @@ std::istream& operator>>(std::istream& is, Ellipse& ellipse)
 
 std::ostream& operator<<(std::ostream& os, const Ellipse& ellipse)
 {
-	os << "?";
+	ellipse.afficher(os);
 	return os;
 }

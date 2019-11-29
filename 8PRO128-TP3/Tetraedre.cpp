@@ -25,25 +25,15 @@ double Tetraedre::hauteur() const
 	return sqrt(6) / 3 * TriangleEq::cote1;
 }
 
-void Tetraedre::afficher() const
+void Tetraedre::afficher(std::ostream& os) const
 {
-	std::cout << *this << std::endl;
-
-	std::string path = "ResourceFiles/Output/resultTetraedre.txt";
-	bool exist = false;
-
-	std::ifstream ifs(path);
-	if (ifs)
-		exist = true;
-	ifs.close();
-
-	std::ofstream ofs(path, std::ios::out | std::ios::app);
-	if (!exist)
-		ofs << Tetraedre::getEntete() << std::endl;
-
-	ofs << *this << std::endl;
-
-	ofs.close();
+	os << "TriangleEq:" << std::endl;
+	os << this->getEntete() << std::endl;
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->TriangleEq::cote1 << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->aire() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->face() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->volume() << " ";
+	os << std::setw(9) << std::setprecision(2) << std::fixed << this->hauteur();
 }
 
 std::string Tetraedre::getEntete()
@@ -61,11 +51,6 @@ std::istream& operator>>(std::istream& is, Tetraedre& tetraedre)
 
 std::ostream& operator<<(std::ostream& os, const Tetraedre& tetraedre)
 {
-	os << std::setw(9) << std::setprecision(2) << std::fixed << tetraedre.TriangleEq::cote1 << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << tetraedre.aire() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << tetraedre.face() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << tetraedre.volume() << " ";
-	os << std::setw(9) << std::setprecision(2) << std::fixed << tetraedre.hauteur();
-
+	tetraedre.afficher(os);
 	return os;
 }
