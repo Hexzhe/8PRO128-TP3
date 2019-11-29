@@ -27,9 +27,7 @@ int main()
 	tabFig[8] = new Cube(7.48887238722);
 
 	for (size_t i = 0; i < 9; i++)
-	{
 		std::cout << *tabFig[i] << std::endl;
-	}
 
 	std::cout << std::endl;
 
