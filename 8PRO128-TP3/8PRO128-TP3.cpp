@@ -6,12 +6,12 @@
 int main()
 {
 	//Partie 1
+	std::cout << "===== Partie 1 =====" << std::endl;
 	//TODO
+	std::cout << std::endl;
 
 	//Partie 2
-	//TODO
-
-	//Partie 3
+	std::cout << "===== Partie 2 =====" << std::endl;
 	Figure* tabFig[9]; //Le docx mentionne 12 mais il n'y a que 9 figures?
 
 	tabFig[0] = new Tetraedre();
@@ -30,6 +30,12 @@ int main()
 	{
 		std::cout << tabFig[i] << std::endl;
 	}
+
+	std::cout << std::endl;
+
+	//Partie 3
+	std::cout << "===== Partie 3 =====" << std::endl;
+	
 
 	return 0;
 }
