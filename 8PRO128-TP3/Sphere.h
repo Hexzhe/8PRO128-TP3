@@ -6,6 +6,7 @@ class Sphere :
 {
 public :
 	Sphere();
+	Sphere(double r);
 	~Sphere() {};
 
 	double diametre() const;

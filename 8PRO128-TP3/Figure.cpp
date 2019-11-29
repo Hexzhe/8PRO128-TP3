@@ -4,7 +4,7 @@ void Figure::afficher(std::ostream& os) const
 {
 	os << "Figure:" << std::endl;
 	os << this->getEntete() << std::endl;
-	os << "?" << std::flush;
+	os << "No instruction" << std::flush;
 }
 
 std::string Figure::getEntete()

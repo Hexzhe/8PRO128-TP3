@@ -19,8 +19,8 @@ int main()
 	tabFig[2] = new Tetraedre(420);
 
 	tabFig[3] = new Ellipse();
-	tabFig[4] = new Cercle();
-	tabFig[5] = new Sphere();
+	tabFig[4] = new Cercle(69);
+	tabFig[5] = new Sphere(420);
 
 	tabFig[6] = new Rectangle();
 	tabFig[7] = new Carre();

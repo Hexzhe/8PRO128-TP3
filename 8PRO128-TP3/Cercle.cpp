@@ -5,6 +5,11 @@ Cercle::Cercle() : Ellipse()
 	rayon = 0.0;
 }
 
+Cercle::Cercle(double r) : Ellipse()
+{
+	rayon = r;
+}
+
 double Cercle::aire() const
 {
 	return M_PI * pow(rayon, 2);

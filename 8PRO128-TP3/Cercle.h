@@ -6,6 +6,7 @@ class Cercle :
 {
 public : 
 	Cercle();
+	Cercle(double r);
 	~Cercle() {};
 
 	double rayon;

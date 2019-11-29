@@ -8,7 +8,7 @@ void Ellipse::afficher(std::ostream& os) const
 {
 	os << "Ellipse:" << std::endl;
 	os << this->getEntete() << std::endl;
-	os << "?" << std::flush;
+	os << "No instruction" << std::flush;
 }
 
 std::string Ellipse::getEntete()

@@ -4,6 +4,10 @@ Sphere::Sphere() : Cercle()
 {
 }
 
+Sphere::Sphere(double r) : Cercle(r)
+{
+}
+
 double Sphere::diametre() const
 {
 	return 2 * Cercle::rayon;
